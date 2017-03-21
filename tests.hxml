@@ -1,0 +1,9 @@
+-lib hxnodejs
+-lib buddy
+-D buddy-colors
+
+-cp src 
+-cp ./tests/
+
+-debug
+-main RunTests

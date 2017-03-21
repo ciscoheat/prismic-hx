@@ -1,0 +1,10 @@
+{
+    "name": "prismic-hx",
+    "url": "https://github.com/ciscoheat/prismic-hx",
+    "description": "Haxe externs for prismic.io",
+    "license": "MIT",
+    "releasenote": "Initial version.",
+    "contributors": ["ciscoheat"],
+    "version": "0.1.0",
+    "tags": ["api", "cms", "cloud", "backend", "headless"]
+}

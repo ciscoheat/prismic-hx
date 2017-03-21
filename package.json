@@ -1,0 +1,15 @@
+{
+  "name": "prismic-hx",
+  "version": "0.1.0",
+  "repository": "https://github.com/ciscoheat/prismic-hx",
+  "description": "Haxe externs for prismic.io",
+  "scripts": {
+  	"install": "haxelib run travix install",
+    "test": "haxelib run travix node"
+  },
+  "author": "ciscoheat",
+  "license": "MIT",
+  "dependencies": {
+    "prismic.io": "^3.5.0"
+  }
+}
