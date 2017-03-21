@@ -1,6 +1,5 @@
 package prismic;
 
-import js.Error;
 import js.html.XMLHttpRequest;
 import prismic.Predicates.Predicate;
 

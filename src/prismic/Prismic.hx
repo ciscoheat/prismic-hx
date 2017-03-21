@@ -1,7 +1,7 @@
 package prismic;
 
 typedef PrismicApiOptions = {
-	@:optional var complete : js.Error -> Api -> Void;
+	@:optional var complete : Error -> Api -> Void;
 	@:optional var accessToken : String;
 	#if js_kit
 	@:optional var req : js.npm.express.Request;

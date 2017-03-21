@@ -1,6 +1,7 @@
 using buddy.Should;
 
 import prismic.*;
+import prismic.Predicates.Path;
 
 class RunTests extends buddy.SingleSuite
 {
@@ -16,8 +17,8 @@ class RunTests extends buddy.SingleSuite
 				}});
 			});
 
-			it("should return a single document properly", function(done) {
-				api.getSingle("start", function(err : js.Error, doc : Doc) {
+			it("should return a single document", function(done) {
+				api.getSingle("start", function(err : Error, doc : Doc) {
 					if(err != null) return fail(err);
 					//js.Node.console.dir(doc, {depth:8});
 					doc.uid.should.be("the-start-page");
@@ -25,12 +26,16 @@ class RunTests extends buddy.SingleSuite
 				});
 			});
 
-			it("should return multiple documents properly", function(done) {
-				api.query(Predicates.at('document.type', 'page'), {
+			it("should return multiple documents using predicates", function(done) {
+				api.query([
+					Predicates.at(DocumentType, 'page'), 
+					//Predicates.dateBetween(DocumentFirstPublicationDate, Date.fromString("2017-01-01"), Date.fromString("2020-01-01"))
+					Predicates.dateAfter(DocumentFirstPublicationDate, Date.fromString("2017-01-01"))
+				], {
 					orderings: '[my.page.title desc]'
 				}, function(err, response) {
 					if(err != null) return fail(err);
-					//js.Node.console.dir(response.results[0], {depth:8});
+					//js.Node.console.dir(response, {depth:8});
 					response.results_size.should.be(2);
 					response.results[0].uid.should.be("page2");
 					response.results[1].uid.should.be("page1");
