@@ -15,10 +15,10 @@ matrix:
   allow_failures:
     - haxe: development
     
-install:
-  - npm install
+install:  
   - haxelib install travix
   - haxelib run travix install
+  - npm install
 
 script:
   - haxelib run travix node
