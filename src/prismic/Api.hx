@@ -14,8 +14,8 @@ extern class Api
 	@:overload(function(id : String, options : {}, cb : Error -> Doc -> Void) : Void {})
 	public function getByID(id : String, cb : Error -> Doc -> Void) : Void;	
 
-	@:overload(function(ids : Array<String>, options : {}, cb : Error -> Array<Doc> -> Void) : Void {})
-	public function getByIDs(ids : Array<String>, cb : Error -> Array<Doc> -> Void) : Void;
+	@:overload(function(ids : Array<String>, options : {}, cb : Error -> PrismicResponse -> Void) : Void {})
+	public function getByIDs(ids : Array<String>, cb : Error -> PrismicResponse -> Void) : Void;
 
 	@:overload(function(pageType : String, uid : String, options : {}, cb : Error -> Doc -> Void) : Void {})
 	public function getByUID(pageType : String, uid : String, cb : Error -> Doc -> Void) : Void;	

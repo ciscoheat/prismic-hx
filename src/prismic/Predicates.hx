@@ -3,8 +3,12 @@ package prismic;
 @:jsRequire('prismic.io', 'Predicates')
 extern class Predicates
 {
+	@:overload(function(path : Path, values : Array<String>) : Predicate {})
 	static function at(path : Path, value : String) : Predicate;
+
+	@:overload(function(path : Path, values : Array<String>) : Predicate {})
 	static function not(path : Path, value : String) : Predicate;
+
 	static function missing(path : Path) : Predicate;
 	static function has(path : Path) : Predicate;
 	static function any(path : Path, values : Array<String>) : Predicate;
@@ -47,7 +51,7 @@ abstract Predicate(Array<String>) {}
 @:enum abstract Path(String) from String to String {
 	var DocumentType = "document.type";
 	var DocumentId = "document.id";
-	var DocumentTag = "document.tag";
+	var DocumentTags = "document.tags";
 	var DocumentFirstPublicationDate = "document.first_publication_date";
 	var DocumentLastPublicationDate = "document.last_publication_date";
 	var Document = "document";
