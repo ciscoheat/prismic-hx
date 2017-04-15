@@ -3,8 +3,8 @@
     "url": "https://github.com/ciscoheat/prismic-hx",
     "description": "Haxe externs for prismic.io",
     "license": "MIT",
-    "releasenote": "Initial version.",
+    "releasenote": "API updates, added tests for predicates and query helpers.",
     "contributors": ["ciscoheat"],
-    "version": "0.1.0",
+    "version": "0.2.0",
     "tags": ["api", "cms", "cloud", "backend", "headless"]
 }
